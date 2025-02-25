@@ -1,0 +1,35 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+header {
+    background-color: #161b22;
+    padding: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+section {
+    margin: 50px 20px;
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 10px;
+}
+h2 {
+    color: #58a6ff;
+}

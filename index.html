@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" style="color: #ffcc00;">À propos</a></li>
+                <li><a href="./pages/competences.html">Compétences</a></li>
+                <li><a href="./pages/projets.html">Projets</a></li>
+                <li><a href="./pages/experiences.html">Expérience</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="accueil">
+        <h2>Bienvenue</h2>
+        <p>Je m'appelle Walid Djouadi eleve en BTS SIO je suis un passionné d'informatique et de développement web.</p>
+    </section>
+    
+    <section id="competences">
+        <h2>Compétences</h2>
+        <p>HTML, CSS, JavaScript, Blender, </p>
+    </section>
+    
+    <section id="projets">
+        <h2>Projets</h2>
+        <p>Présentation de mes réalisations.</p>
+    </section>
+    
+    <section id="experience">
+        <h2>Expérience</h2>
+        <p>Mon parcours professionnel et académique.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email : djouadi.walidpro@gmail.com</p>
+    </section>
+    
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("mouseover", () => {
+                    link.style.color = "#ffcc00";
+                });
+                link.addEventListener("mouseout", () => {
+                    link.style.color = "#58a6ff";
+                });
+            });
+            
+            window.addEventListener("scroll", () => {
+                document.querySelectorAll("section").forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight / 1.5) {
+                        section.style.opacity = "1";
+                        section.style.transform = "translateY(0)";
+                    }
+                });
+            });
+        });
+    </script> -->
+</body>
+</html>
