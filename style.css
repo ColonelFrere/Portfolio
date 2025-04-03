@@ -113,3 +113,48 @@ nav a.active {
 #certifications h2{
     text-align: center;
 }
+
+#competences {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#competences h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.competence-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.competence-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
