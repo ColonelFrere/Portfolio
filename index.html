@@ -8,6 +8,61 @@
 
 </head>
 <body>
+    <style>.btn {
+        --color: #d85b02;
+        --color2: rgb(152, 152, 152);
+        padding: 0.8em 1.75em;
+        background-color: rgb(0, 0, 0);
+        border-radius: 6px;
+        border: .3px solid var(--color);
+        transition: .5s;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 1;
+        font-weight: 300;
+        font-size: 17px;
+        font-family: 'Roboto', 'Segoe UI', sans-serif;
+        text-transform: uppercase;
+        color: orange;
+       }
+       
+       .btn::after, .btn::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+        transition: .5s ease-out;
+        background-color: var(--color);
+       }
+       
+       .btn::before {
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover::before {
+        transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover::after {
+        transform: skew(45deg) translate(-50%, -50%);
+       }
+       
+       .btn:hover {
+        color: var(--color2);
+       }
+       
+       .btn:active {
+        filter: brightness(.7);
+        transform: scale(.98);
+       }</style>
     <header>
         <h1>Mon Portfolio</h1>
         <nav>
@@ -15,8 +70,8 @@
                 <li><a href="./index.html" style="color: #ffcc00;">À propos</a></li>
                 <li><a href="./pages/parcours.html">Parcours</a></li>
                 <li><a href="./pages/projets.html">Projets</a></li>
-                <li><a href="./pages/experiences.html">Expérience</a></li>
                 <li><a href="./pages/certifications.html">Certifications</a></li>
+                <li><a href="./pages/veille_techno.html">Certifications</a></li>
             </ul>
         </nav>
     </header>
@@ -28,6 +83,12 @@
                 J'aime particulièrement le développement web et la création de solutions adaptées aux besoins des utilisateurs.
                 Curieux et motivé, je cherche constamment à améliorer mes compétences techniques à travers divers projets.
             </p>
+                <button class="btn">
+                    <a href="./images/CV_Walid_Djouadi.pdf" target="_blank" class="btn-cv">
+                
+                        📄 Voir mon CV</a>
+                </button>
+
         </div>
         <div class="photo">
             <img src="images/IMG-20230612-WA0000.jpg" alt="Walid Djouadi" width="250">
