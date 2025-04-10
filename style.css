@@ -242,3 +242,110 @@ nav a.active {
     margin-left: 10px;
   }
   
+  /*projets*/
+
+  .projets-page {
+    padding: 2rem;
+    scroll-behavior: smooth;
+  }
+  
+  .projets-nav {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .projets-nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .projets-section {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .projets-section h2 {
+    margin-bottom: 1.5rem;
+    color: #ffcc00;
+    text-align: center;
+  }
+  
+  .projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* carousel */
+  .projet-card {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  .projet-card:hover {
+    transform: translateY(-5px);
+  }
+  .carousel-section {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #111, #222);
+    color: white;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #1a1a1a;
+  }
+  
+  .carousel-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .carousel-text {
+    padding: 1rem;
+  }
+  
+  .carousel-text h3 {
+    margin: 0.5rem 0;
+    color: #ffc107;
+  }
+  
+  .carousel-text a {
+    color: #4da6ff;
+    text-decoration: underline;
+  }
+  
+  .carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 1rem;
+  }
+  
+  .carousel-nav button {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
