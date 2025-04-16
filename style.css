@@ -27,7 +27,7 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a {
-    color: #00026a;
+    color:  #ffb4a2;
     text-decoration: none;
 }
 
@@ -143,7 +143,7 @@ nav a.active {
 }
 
 .competence-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 15px;
@@ -200,7 +200,7 @@ nav a.active {
     text-align: center;
     font-size: 1.6rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #648df5;
+    border-bottom: 2px solid #ffc107;
     padding-bottom: 10px;
   }
   
@@ -231,7 +231,7 @@ nav a.active {
   .timeline-content .date {
     float: right;
     font-size: 0.85rem;
-    background-color: #648df5;
+    background-color: #ffc107;
     padding: 3px 8px;
     border-radius: 8px;
     color: white;
@@ -263,7 +263,7 @@ nav a.active {
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
-    color: #333;
+    color: rgba(0,0,0,0.3);
   }
   
   .projets-section {
@@ -271,6 +271,7 @@ nav a.active {
     padding: 2rem 1rem;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, #111, #222);
   }
   
   .projets-section h2 {
@@ -283,6 +284,13 @@ nav a.active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+  }
+
+  .projets-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
   }
   
   /* carousel */
@@ -310,7 +318,7 @@ nav a.active {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background-color: #1a1a1a;
+    background: rgba(0,0,0,0.3);
   }
   
   .carousel-container img {
@@ -340,7 +348,7 @@ nav a.active {
   }
   
   .carousel-nav button {
-    background-color: #333;
+    background-color: #000000;
     border: none;
     color: white;
     padding: 0.5rem 1rem;
@@ -348,4 +356,89 @@ nav a.active {
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
+  /*btn_synthese*/
+  /* Section qui contient le bouton, centrage horizontal */
+#fiche-synthese {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0; /* Marge verticale pour respirer */
+}
+
+/* Conteneur du bouton */
+.btn_synthese {
+  width: fit-content;
+}
+
+/* Style du bouton */
+.btn_synthese button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 5px;
+  background: black;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+/* Animation du fond au survol */
+.btn_synthese button::after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.btn_synthese button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+/* Style du texte dans le bouton */
+.btn_synthese button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Couleur du texte et animation au hover */
+.btn_synthese button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+/* Animation scaleUp */
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

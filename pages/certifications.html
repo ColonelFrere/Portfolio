@@ -5,14 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="../style.css">
-
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f5ff30;
+          color: #fff;
+          margin: 0;
+          padding: 2rem;
+        }
+    
+        h1 {
+          text-align: center;
+          margin-bottom: 2rem;
+          color: ffb4a2; 
+        }
+    
+        .cert-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 2rem;
+        }
+    
+        .card {
+          background-color: #1e293b;
+          border-radius: 10px;
+          width: 300px;
+          padding: 1rem;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+          text-align: center;
+        }
+    
+        .card img {
+          max-width: 100%;
+          border-radius: 8px;
+        }
+    
+        .card h3 {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
+    
+        .card p {
+          font-size: 0.9rem;
+          margin: 0.5rem 0;
+        }
+    
+        .btn {
+          margin-top: 1rem;
+          background-color: #1a1b2f;
+          color: #fff;
+          padding: 0.6rem 1rem;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          display: inline-block;
+        }
+    
+        .btn:hover {
+          background-color:#ffc107;
+          ;
+        }
+      </style>
 </head>
 <body>
     <header>
         <h1>Certifications</h1>
         <nav>
             <ul>
-                <li><a href="../index.html" style="color: #ffcc00;">À propos</a></li>
+                <li><a href="../index.html">À propos</a></li>
                 <li><a href="./parcours.html">Parcours</a></li>
                 <li><a href="./projets.html">Projets</a></li>
                 <li><a href="./certifications.html">Certifications</a></li>
@@ -21,19 +82,44 @@
         </nav>
     </header>
 
+    <h1>Mes Certifications</h1>
+
+    <div class="cert-container" id="certifications">
+    </div>
+
     <button id="topButton">↑ Haut</button>
 
 </body>
 <script>
-    let compteur = 0;
+    const certifications = [
+      {
+        title: "Certification SoloLearn - Developpeur web",
+        org: "SoloLearn",
+        description: "Certificat attestant de mes compétences a développer un site web .",
+        date: "13/04/2025",
+        img: "../images/walid-certif_web.jpg",
+        link: "https://www.sololearn.com/certificates/CC-44TRYVHO"
+      }
+    ];
 
-    function ajouterElement() {
-      compteur++; // On incrémente le compteur
-      document.getElementById("compteur").textContent = compteur;
+    document.addEventListener("DOMContentLoaded", function () {
+        
 
-      const li = document.createElement("li");
-      li.textContent = "Élément " + compteur;
-      document.getElementById("liste").appendChild(li);
-    }
+    const container = document.getElementById('certifications');
+
+    certifications.forEach(cert => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${cert.img}" alt="${cert.title}">
+        <h3>${cert.title}</h3>
+        <p><strong>${cert.org}</strong></p>
+        <p>${cert.description}</p>
+        <p><strong>Date d'obtention :</strong> ${cert.date}</p>
+        <a href="${cert.link}" class="btn">🥇 Voir la certification</a>
+      `;
+      container.appendChild(card);
+    })
+    });
   </script>
 </html>
