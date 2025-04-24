@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/retro_back02.jpg');
+    background-color: #33325f;
     background-size: cover; /* Ajuste l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image dans l'élément */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
@@ -441,4 +441,8 @@ nav a.active {
   100% {
     transform: scale(1);
   }
+}
+.ma_veille h3{
+  color: ffcc00;
+
 }

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="../style.css">
+    <script defer src="../pages/certifications.js"></script>
     <style>
         body {
           font-family: Arial, sans-serif;
-          background-color: #f5ff30;
+          background-color: #33325f;
           color: #fff;
           margin: 0;
           padding: 2rem;
@@ -90,36 +91,5 @@
     <button id="topButton">↑ Haut</button>
 
 </body>
-<script>
-    const certifications = [
-      {
-        title: "Certification SoloLearn - Developpeur web",
-        org: "SoloLearn",
-        description: "Certificat attestant de mes compétences a développer un site web .",
-        date: "13/04/2025",
-        img: "../images/walid-certif_web.jpg",
-        link: "https://www.sololearn.com/certificates/CC-44TRYVHO"
-      }
-    ];
 
-    document.addEventListener("DOMContentLoaded", function () {
-        
-
-    const container = document.getElementById('certifications');
-
-    certifications.forEach(cert => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <img src="${cert.img}" alt="${cert.title}">
-        <h3>${cert.title}</h3>
-        <p><strong>${cert.org}</strong></p>
-        <p>${cert.description}</p>
-        <p><strong>Date d'obtention :</strong> ${cert.date}</p>
-        <a href="${cert.link}" class="btn">🥇 Voir la certification</a>
-      `;
-      container.appendChild(card);
-    })
-    });
-  </script>
 </html>
